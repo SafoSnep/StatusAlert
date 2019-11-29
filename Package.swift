@@ -12,6 +12,10 @@ let package = Package(
         .library(name: "StatusAlert", targets: ["StatusAlert"]),
     ],
     targets: [
-        .target(name: "StatusAlert", dependencies: []),
+        .target(
+			name: "StatusAlert",
+			dependencies: [],
+			path: "Sources/StatusAlert"
+		),
     ]
 )
