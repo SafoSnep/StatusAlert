@@ -4,18 +4,18 @@
 import PackageDescription
 
 let package = Package(
-    name: "StatusAlert",
-    platforms: [
-       .iOS(.v9),
-    ],
-    products: [
-        .library(name: "StatusAlert", targets: ["StatusAlert"]),
-    ],
-    targets: [
-        .target(
+	name: "StatusAlert",
+	platforms: [
+		.iOS(.v9),
+	],
+	products: [
+		.library(name: "StatusAlert", targets: ["StatusAlert"]),
+	],
+	targets: [
+		.target(
 			name: "StatusAlert",
 			dependencies: [],
 			path: "Sources/StatusAlert"
 		),
-    ]
+	]
 )
