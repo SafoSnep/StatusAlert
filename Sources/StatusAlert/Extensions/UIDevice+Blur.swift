@@ -9,8 +9,7 @@ extension UIDevice {
     /// - if device supports blur.
     var isBlurAvailable: Bool {
         guard operationSystemSupportsBlur,
-            !reduceTransparencyEnabled,
-            deviceSupportsBlur
+            !reduceTransparencyEnabled
             else {
                 return false
         }
@@ -28,11 +27,5 @@ extension UIDevice {
     
     private var reduceTransparencyEnabled: Bool {
         return UIAccessibility.isReduceTransparencyEnabled
-    }
-    
-    private var deviceSupportsBlur: Bool {
-        return platform.isNewerThan(UIDevice.DevicePlatform.iPadModel.iPad3)
-            || platform.isNewerThan(UIDevice.DevicePlatform.iPodTouchModel.iPodTouch4)
-            || platform.isNewerThan(UIDevice.DevicePlatform.iPhoneModel.iPhone4)
     }
 }
